@@ -1,0 +1,12 @@
+clc;
+close all;
+clear all;
+I = imread('coins.png');
+subplot(131);
+imshow(I);
+subplot(132);
+imhist(I);
+level = graythresh(I);
+BW = im2bw(I,level);
+subplot(133);
+imshow(BW);
